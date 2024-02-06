@@ -1,0 +1,6 @@
+@ZainCash_HostAddress = http://localhost:5068
+
+GET {{ZainCash_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
