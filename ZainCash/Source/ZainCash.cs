@@ -7,7 +7,9 @@ namespace Infrastructure.EPay;
 public static class ZainCash
 {
     private static byte[] Key => Encoding.ASCII.GetBytes(ZainCashKey.MerchantSecret);
+
     private static string JwtToken(object data) => Jose.JWT.Encode(data, Key, Jose.JwsAlgorithm.HS256);
+
     private static FormUrlEncodedContent Payload(object data) => new
     (
         new List<KeyValuePair<string, string>>
